@@ -1,0 +1,174 @@
+# Warnet Nusantara.Net
+
+> A free, open-source web recreation of an early-2000s Indonesian internet cafe (warnet): billing lock screen with dolphins, XP-style desktop, Wayback Machine time-travel browser, Winamp (Webamp), mIRC-style chat bots, Messenger with BUZZ, and legal retro games. Indonesian UI. No account, no install.
+
+- Play: https://warnet-nusantara.pages.dev/
+- 60-second flashback demo: https://warnet-nusantara.pages.dev/?demo
+- Source code (AGPL-3.0-only; content CC BY-NC-SA 4.0): https://github.com/kelvindesman/warnet-nusantara
+
+## Pages
+
+- [Beranda (Indonesian)](https://warnet-nusantara.pages.dev/id/)
+- [Home (English)](https://warnet-nusantara.pages.dev/en/)
+- [Game Warnet](https://warnet-nusantara.pages.dev/game-warnet/): 46 legal games playable in the browser, 18 memorials for online games that are still owned by their publishers
+- [Winamp](https://warnet-nusantara.pages.dev/winamp/)
+- [mIRC](https://warnet-nusantara.pages.dev/mirc/)
+- [Mesin waktu internet](https://warnet-nusantara.pages.dev/mesin-waktu-internet/): Indonesian websites from 1998–2015 through the Wayback Machine
+- [Tentang warnet](https://warnet-nusantara.pages.dev/tentang-warnet/): FAQ about Indonesian internet cafes in the 2000s
+
+## Games
+
+- Ranjau (2001)
+- Ular HP (2000)
+- Diablo (Shareware) (1996)
+- 3D Pinball Space Cadet (1995)
+- Prince of Persia (1989)
+- DOOM (1993)
+- Wolfenstein 3D (1992)
+- Sango Fighter (1993)
+- Mortal Kombat (1993)
+- The Need for Speed (1995)
+- Jazz Jackrabbit (1994)
+- Commander Keen 4 (1991)
+- Lemmings (1991)
+- SimCity (1989)
+- Tetris (1986)
+- Pac-Man (1983)
+- Digger (1983)
+- Alley Cat (1984)
+- Gorillas (1991)
+- Command & Conquer (1995)
+- Quake (Shareware) (1996)
+- Duke Nukem 3D (Shareware) (1996)
+- Raptor: Call of the Shadows (1994)
+- Tyrian 2000 (1999)
+- Death Rally (1996)
+- One Must Fall: 2097 (1994)
+- Liero (1999)
+- SkyRoads (1993)
+- Warcraft: Orcs & Humans (Demo) (1994)
+- Epic Pinball (1993)
+- SuperTux (2003)
+- Line Rider (2006)
+- Warcraft II (1995)
+- Dune II (1992)
+- Prince of Persia 2 (1993)
+- Dangerous Dave (1990)
+- Worms (1995)
+- Dyna Blaster (1992)
+- Prehistorik 2 (1993)
+- Transport Tycoon Deluxe (1995)
+- Pinball Fantasies (1992)
+- Counter-Strike 1.6 (2003)
+- Grand Theft Auto (1997)
+- Duke Nukem 3D (1996)
+- DOOM multiplayer (1993)
+- 98.js — Windows 98 (1998)
+
+## Online game memorials
+
+- Ragnarok Online Indonesia: MMORPG paling legendaris di warnet Indonesia, poring dan Prontera jadi bahasa sehari-hari.
+- Lyto Game Center: Portal Lyto tempat beli voucher dan baca patch note game online pertama Indonesia.
+- GunBound: Hitung sudut dan angin buat nembak, mobile Armor jadi rebutan.
+- Point Blank Indonesia: FPS online raja warnet akhir 2000-an, cash Gemscool jadi mata uang anak sekolah.
+- Audition AyoDance: Pencet panah ikut irama sambil cari pacar virtual di AyoDance.
+- Seal Online Indonesia: MMORPG imut Lyto yang bersaing dengan Ragnarok di warnet.
+- Lineage II Indonesia: MMORPG grafis wah yang bikin PC warnet harus upgrade VGA.
+- DotA Allstars / Warcraft III: Map DotA bikin warnet penuh teriakan 'gank mid!' tiap malam.
+- Age of Empires II: 'Wololo!' — RTS sejarah yang dimainkan LAN di rental komputer.
+- Winning Eleven / Pro Evolution Soccer: Rental PS dan PC penuh turnamen Winning Eleven, Castolo jadi idola.
+- Harvest Moon: Bertani dan melamar Popuri di rental PS, game santai paling diingat.
+- Command & Conquer: Red Alert: Tanya, Tesla Coil, dan tank Mammoth—RTS LAN paling diingat anak rental.
+- Heroes of Might and Magic III: Satu PC dipakai hotseat bergantian sampai warnet tutup.
+- Nusantara Online: MMORPG buatan anak bangsa bertema Majapahit, bangga main game lokal.
+- Lost Saga Indonesia: Ganti hero pakai gear, duel 'Lost Saga' di warnet tiap pulang sekolah.
+- Dragon Nest Indonesia: Action MMORPG kartun, party nest bareng teman satu baris PC.
+- Dota 2: Bilik penuh teriakan 'report mid!', antre party lima orang sampai subuh.
+- Counter-Strike: Global Offensive: Penerus CS 1.6 di warnet: buka case, berharap dapat pisau.
+
+## Time-travel bookmarks
+
+- detik.com (2001): http://www.detik.com/
+- Kompas Cyber Media (2001): http://www.kompas.com/
+- astaga!com (2000): http://www.astaga.com/
+- satunet.com (2001): http://www.satunet.com/
+- plasa.com (2001): http://www.plasa.com/
+- TelkomNet (2002): http://www.telkom.net/
+- Kafegaul (2002): http://www.kafegaul.com/
+- Kaskus (2001): http://www.kaskus.com/
+- Kaskus.us (2005): http://www.kaskus.us/
+- Friendster (2003): http://www.friendster.com/
+- KapanLagi (2004): http://www.kapanlagi.com/
+- Google (2001): http://www.google.com/
+- Yahoo! (2001): http://www.yahoo.com/
+- Lycos (2001): http://www.lycos.com/
+- Hotmail (2001): http://www.hotmail.com/
+- GeoCities (2001): http://www.geocities.com/
+- Yahoo! Messenger (2003): http://messenger.yahoo.com/
+- mIRC (2002): http://www.mirc.com/
+- Winamp (2003): http://www.winamp.com/
+- Napster (2001): http://www.napster.com/
+- Kazaa (2003): http://www.kazaa.com/
+- Ragnarok Online ID (2004): http://www.ragnarok.co.id/
+- Lyto (2004): http://www.lyto.net/
+- GunBound Boleh (2004): http://gunbound.boleh.com/
+- BolehNet (2002): http://www.bolehnet.com/
+- Counter-Strike (2003): http://www.counter-strike.net/
+- detik.com (2010): http://www.detik.com/
+- Kompas.com (2010): http://www.kompas.com/
+- Facebook (2010): http://www.facebook.com/
+- Twitter (2010): http://twitter.com/
+- Plurk (2010): http://www.plurk.com/
+- Kaskus (2010): http://www.kaskus.us/
+- Koprol (2010): http://www.koprol.com/
+- Multiply (2010): http://www.multiply.com/
+- Blogger (2011): http://www.blogger.com/
+- YouTube (2010): http://www.youtube.com/
+- KapanLagi (2010): http://www.kapanlagi.com/
+- Google (2010): http://www.google.co.id/
+- 4shared (2010): http://www.4shared.com/
+- Gemscool (2010): http://www.gemscool.com/
+- Lyto (2010): http://www.lyto.net/
+- Garena (2011): http://www.garena.co.id/
+- detik.com (2014): http://www.detik.com/
+- Kompas.com (2014): http://www.kompas.com/
+- Facebook (2014): http://www.facebook.com/
+- Twitter (2014): http://www.twitter.com/
+- Instagram (2014): http://instagram.com/
+- Path (2014): http://path.com/
+- Ask.fm (2014): http://ask.fm/
+- Kaskus (2014): http://www.kaskus.co.id/
+- YouTube (2014): http://www.youtube.com/
+- 9GAG (2014): http://9gag.com/
+- Tokopedia (2014): http://www.tokopedia.com/
+- Bukalapak (2014): http://www.bukalapak.com/
+- OLX (2014): http://www.olx.co.id/
+- Google (2014): http://www.google.co.id/
+- Steam (2014): http://store.steampowered.com/
+- Garena (2014): http://www.garena.co.id/
+
+## FAQ (Indonesian)
+
+### Apa itu warnet?
+
+Warnet (warung internet) adalah tempat sewa komputer dan internet per jam. Di Indonesia warnet sangat ramai pada awal 2000-an, saat belum banyak rumah punya internet sendiri.
+
+### Berapa tarif warnet tahun 2000-an?
+
+Tarifnya beragam per kota dan tahun, umumnya beberapa ribu rupiah per jam. Banyak warnet juga punya paket malam yang lebih murah. Di Warnet Nusantara.Net tarifnya Rp 3.000 per jam (cuma pura-pura, semua gratis).
+
+### Apa itu billing warnet?
+
+Billing adalah program yang mengunci komputer klien sampai operator membuka sesi, lalu menghitung waktu dan biaya pemakaian. Layar kuncinya sering bergambar lumba-lumba.
+
+### Kenapa save game di warnet sering hilang?
+
+Banyak warnet memakai program pemulih sistem yang mengembalikan komputer ke kondisi awal setiap restart, jadi file yang disimpan pengunjung ikut hilang.
+
+### Bagaimana orang online lewat dial-up?
+
+Sebelum internet broadband menyebar, banyak orang tersambung lewat modem dial-up di saluran telepon, misalnya layanan Telkomnet Instan. Suara handshake modem jadi ciri khasnya.
+
+### Apakah Warnet Nusantara.Net gratis?
+
+Ya. Semua fitur gratis, tanpa akun dan tanpa install. Proyek ini open source (AGPL-3.0) dan hidup dari patungan sukarela.

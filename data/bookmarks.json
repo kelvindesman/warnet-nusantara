@@ -1,0 +1,422 @@
+[
+  {
+    "name": "detik.com",
+    "url": "http://www.detik.com/",
+    "year": 2001,
+    "cat": "Berita",
+    "hit": "Berita detik demi detik",
+    "hit_en": "News second by second"
+  },
+  {
+    "name": "Kompas Cyber Media",
+    "url": "http://www.kompas.com/",
+    "year": 2001,
+    "cat": "Berita"
+  },
+  {
+    "name": "astaga!com",
+    "url": "http://www.astaga.com/",
+    "year": 2000,
+    "cat": "Portal",
+    "hit": "Portal gaya hidup",
+    "hit_en": "Lifestyle portal"
+  },
+  {
+    "name": "satunet.com",
+    "url": "http://www.satunet.com/",
+    "year": 2001,
+    "cat": "Portal"
+  },
+  {
+    "name": "plasa.com",
+    "url": "http://www.plasa.com/",
+    "year": 2001,
+    "cat": "Portal"
+  },
+  {
+    "name": "TelkomNet",
+    "url": "http://www.telkom.net/",
+    "year": 2002,
+    "cat": "Portal"
+  },
+  {
+    "name": "Kafegaul",
+    "url": "http://www.kafegaul.com/",
+    "year": 2002,
+    "cat": "Komunitas",
+    "hit": "Nongkrong virtual anak gaul",
+    "hit_en": "Where the cool kids hang out online"
+  },
+  {
+    "name": "Kaskus",
+    "url": "http://www.kaskus.com/",
+    "year": 2001,
+    "cat": "Komunitas",
+    "hit": "The Largest Indonesian Community"
+  },
+  {
+    "name": "Kaskus.us",
+    "url": "http://www.kaskus.us/",
+    "year": 2005,
+    "cat": "Komunitas"
+  },
+  {
+    "name": "Friendster",
+    "url": "http://www.friendster.com/",
+    "year": 2003,
+    "cat": "Komunitas",
+    "hit": "Testi dong, testi!",
+    "hit_en": "Testi me, testi me!"
+  },
+  {
+    "name": "KapanLagi",
+    "url": "http://www.kapanlagi.com/",
+    "year": 2004,
+    "cat": "Hiburan"
+  },
+  {
+    "name": "Google",
+    "url": "http://www.google.com/",
+    "year": 2001,
+    "cat": "Cari"
+  },
+  {
+    "name": "Yahoo!",
+    "url": "http://www.yahoo.com/",
+    "year": 2001,
+    "cat": "Cari",
+    "hit": "Do You Yahoo!?"
+  },
+  {
+    "name": "Lycos",
+    "url": "http://www.lycos.com/",
+    "year": 2001,
+    "cat": "Cari"
+  },
+  {
+    "name": "Hotmail",
+    "url": "http://www.hotmail.com/",
+    "year": 2001,
+    "cat": "Email"
+  },
+  {
+    "name": "GeoCities",
+    "url": "http://www.geocities.com/",
+    "year": 2001,
+    "cat": "Komunitas",
+    "hit": "Bikin homepage gratis",
+    "hit_en": "Make a free homepage"
+  },
+  {
+    "name": "Yahoo! Messenger",
+    "url": "http://messenger.yahoo.com/",
+    "year": 2003,
+    "cat": "Download"
+  },
+  {
+    "name": "mIRC",
+    "url": "http://www.mirc.com/",
+    "year": 2002,
+    "cat": "Download"
+  },
+  {
+    "name": "Winamp",
+    "url": "http://www.winamp.com/",
+    "year": 2003,
+    "cat": "Download"
+  },
+  {
+    "name": "Napster",
+    "url": "http://www.napster.com/",
+    "year": 2001,
+    "cat": "Download"
+  },
+  {
+    "name": "Kazaa",
+    "url": "http://www.kazaa.com/",
+    "year": 2003,
+    "cat": "Download"
+  },
+  {
+    "name": "Ragnarok Online ID",
+    "url": "http://www.ragnarok.co.id/",
+    "year": 2004,
+    "cat": "Game Online",
+    "hit": "Prontera macet lagi",
+    "hit_en": "Prontera is jammed again"
+  },
+  {
+    "name": "Lyto",
+    "url": "http://www.lyto.net/",
+    "year": 2004,
+    "cat": "Game Online"
+  },
+  {
+    "name": "GunBound Boleh",
+    "url": "http://gunbound.boleh.com/",
+    "year": 2004,
+    "cat": "Game Online",
+    "hit": "Angle 89 power full",
+    "hit_en": "Angle 89, full power"
+  },
+  {
+    "name": "BolehNet",
+    "url": "http://www.bolehnet.com/",
+    "year": 2002,
+    "cat": "Game Online"
+  },
+  {
+    "name": "Counter-Strike",
+    "url": "http://www.counter-strike.net/",
+    "year": 2003,
+    "cat": "Game Online"
+  },
+  {
+    "name": "detik.com",
+    "url": "http://www.detik.com/",
+    "year": 2010,
+    "cat": "Berita",
+    "era": "2011",
+    "hit": "Berita detik demi detik",
+    "hit_en": "News second by second"
+  },
+  {
+    "name": "Kompas.com",
+    "url": "http://www.kompas.com/",
+    "year": 2010,
+    "cat": "Berita",
+    "era": "2011"
+  },
+  {
+    "name": "Facebook",
+    "url": "http://www.facebook.com/",
+    "year": 2010,
+    "cat": "Komunitas",
+    "era": "2011",
+    "hit": "Update status dulu, belajar belakangan",
+    "hit_en": "Update your status first, study later"
+  },
+  {
+    "name": "Twitter",
+    "url": "http://twitter.com/",
+    "year": 2010,
+    "cat": "Komunitas",
+    "era": "2011",
+    "hit": "Nge-tweet galau 140 karakter",
+    "hit_en": "Moody tweets, 140 characters"
+  },
+  {
+    "name": "Plurk",
+    "url": "http://www.plurk.com/",
+    "year": 2010,
+    "cat": "Komunitas",
+    "era": "2011",
+    "hit": "Ngejar karma Plurk",
+    "hit_en": "Chasing Plurk karma"
+  },
+  {
+    "name": "Kaskus",
+    "url": "http://www.kaskus.us/",
+    "year": 2010,
+    "cat": "Komunitas",
+    "era": "2011",
+    "hit": "The Largest Indonesian Community"
+  },
+  {
+    "name": "Koprol",
+    "url": "http://www.koprol.com/",
+    "year": 2010,
+    "cat": "Komunitas",
+    "era": "2011"
+  },
+  {
+    "name": "Multiply",
+    "url": "http://www.multiply.com/",
+    "year": 2010,
+    "cat": "Komunitas",
+    "era": "2011"
+  },
+  {
+    "name": "Blogger",
+    "url": "http://www.blogger.com/",
+    "year": 2011,
+    "cat": "Komunitas",
+    "era": "2011"
+  },
+  {
+    "name": "YouTube",
+    "url": "http://www.youtube.com/",
+    "year": 2010,
+    "cat": "Hiburan",
+    "era": "2011",
+    "hit": "Nonton video viral, buffering dulu",
+    "hit_en": "Viral videos, after the buffering"
+  },
+  {
+    "name": "KapanLagi",
+    "url": "http://www.kapanlagi.com/",
+    "year": 2010,
+    "cat": "Hiburan",
+    "era": "2011"
+  },
+  {
+    "name": "Google",
+    "url": "http://www.google.co.id/",
+    "year": 2010,
+    "cat": "Cari",
+    "era": "2011"
+  },
+  {
+    "name": "4shared",
+    "url": "http://www.4shared.com/",
+    "year": 2010,
+    "cat": "Download",
+    "era": "2011"
+  },
+  {
+    "name": "Gemscool",
+    "url": "http://www.gemscool.com/",
+    "year": 2010,
+    "cat": "Game Online",
+    "era": "2011",
+    "hit": "Top up cash PB dulu",
+    "hit_en": "Topping up Point Blank cash"
+  },
+  {
+    "name": "Lyto",
+    "url": "http://www.lyto.net/",
+    "year": 2010,
+    "cat": "Game Online",
+    "era": "2011"
+  },
+  {
+    "name": "Garena",
+    "url": "http://www.garena.co.id/",
+    "year": 2011,
+    "cat": "Game Online",
+    "era": "2011"
+  },
+  {
+    "name": "detik.com",
+    "url": "http://www.detik.com/",
+    "year": 2014,
+    "cat": "Berita",
+    "era": "2015",
+    "hit": "Berita detik demi detik",
+    "hit_en": "News second by second"
+  },
+  {
+    "name": "Kompas.com",
+    "url": "http://www.kompas.com/",
+    "year": 2014,
+    "cat": "Berita",
+    "era": "2015"
+  },
+  {
+    "name": "Facebook",
+    "url": "http://www.facebook.com/",
+    "year": 2014,
+    "cat": "Komunitas",
+    "era": "2015"
+  },
+  {
+    "name": "Twitter",
+    "url": "http://www.twitter.com/",
+    "year": 2014,
+    "cat": "Komunitas",
+    "era": "2015"
+  },
+  {
+    "name": "Instagram",
+    "url": "http://instagram.com/",
+    "year": 2014,
+    "cat": "Komunitas",
+    "era": "2015",
+    "hit": "Foto dulu, pakai filter Valencia",
+    "hit_en": "Photo first, Valencia filter on"
+  },
+  {
+    "name": "Path",
+    "url": "http://path.com/",
+    "year": 2014,
+    "cat": "Komunitas",
+    "era": "2015",
+    "hit": "Check-in di warnet biar eksis",
+    "hit_en": "Checking in at the warnet to look cool"
+  },
+  {
+    "name": "Ask.fm",
+    "url": "http://ask.fm/",
+    "year": 2014,
+    "cat": "Komunitas",
+    "era": "2015"
+  },
+  {
+    "name": "Kaskus",
+    "url": "http://www.kaskus.co.id/",
+    "year": 2014,
+    "cat": "Komunitas",
+    "era": "2015",
+    "hit": "The Largest Indonesian Community"
+  },
+  {
+    "name": "YouTube",
+    "url": "http://www.youtube.com/",
+    "year": 2014,
+    "cat": "Hiburan",
+    "era": "2015"
+  },
+  {
+    "name": "9GAG",
+    "url": "http://9gag.com/",
+    "year": 2014,
+    "cat": "Hiburan",
+    "era": "2015"
+  },
+  {
+    "name": "Tokopedia",
+    "url": "http://www.tokopedia.com/",
+    "year": 2014,
+    "cat": "Belanja",
+    "era": "2015",
+    "hit": "Belanja online pertama kali",
+    "hit_en": "Shopping online for the first time"
+  },
+  {
+    "name": "Bukalapak",
+    "url": "http://www.bukalapak.com/",
+    "year": 2014,
+    "cat": "Belanja",
+    "era": "2015"
+  },
+  {
+    "name": "OLX",
+    "url": "http://www.olx.co.id/",
+    "year": 2014,
+    "cat": "Belanja",
+    "era": "2015"
+  },
+  {
+    "name": "Google",
+    "url": "http://www.google.co.id/",
+    "year": 2014,
+    "cat": "Cari",
+    "era": "2015"
+  },
+  {
+    "name": "Steam",
+    "url": "http://store.steampowered.com/",
+    "year": 2014,
+    "cat": "Game Online",
+    "era": "2015",
+    "hit": "Nunggu Steam Summer Sale",
+    "hit_en": "Waiting for the Steam Summer Sale"
+  },
+  {
+    "name": "Garena",
+    "url": "http://www.garena.co.id/",
+    "year": 2014,
+    "cat": "Game Online",
+    "era": "2015"
+  }
+]

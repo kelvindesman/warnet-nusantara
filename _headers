@@ -1,0 +1,8 @@
+# Cloudflare Pages response headers (same as vercel.json for the Vercel mirror).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+/js/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/css/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400

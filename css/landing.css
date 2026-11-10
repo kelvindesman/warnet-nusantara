@@ -1,0 +1,23 @@
+/* Static landing pages (SEO/GEO). Plain, fast, readable; the retro fun lives in the app. */
+:root { --blue: #0a246a; --sky: #3a6ea5; --gold: #ffd84a; --ink: #1b1b1b; --paper: #fdfcf7; --muted: #555; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 17px/1.6 Tahoma, Verdana, 'Segoe UI', sans-serif; color: var(--ink); background: var(--paper); }
+header { background: linear-gradient(var(--sky), var(--blue)); color: #fff; padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; }
+.brand { color: #fff; text-decoration: none; font: italic 900 20px 'Arial Black', Arial, sans-serif; letter-spacing: 1px; }
+.brand b { color: var(--gold); }
+nav { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; }
+nav a { color: #dfe8ff; }
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 40px; }
+h1 { font-size: 30px; line-height: 1.25; color: var(--blue); margin: 8px 0 16px; }
+h2 { font-size: 21px; color: var(--blue); margin-top: 28px; }
+a { color: #0645ad; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-block; padding: 9px 16px; border-radius: 4px; background: var(--gold); color: #000; font-weight: bold; text-decoration: none; border: 1px solid #b8962b; }
+.btn.alt { background: #fff; border-color: var(--sky); color: var(--blue); }
+ul { padding-left: 22px; }
+code { background: #eee; padding: 0 4px; border-radius: 3px; }
+footer { border-top: 1px solid #ddd; padding: 16px; font-size: 13px; color: var(--muted); text-align: center; }
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #e8e8e8; --paper: #121722; --muted: #9aa; }
+  h1, h2 { color: #9cc0ff; } a { color: #8ab4ff; } code { background: #232a38; } footer { border-color: #2a3242; }
+}

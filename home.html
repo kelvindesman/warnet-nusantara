@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal Nusantara.Net</title>
+<style>
+  body { margin: 0; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect width='8' height='8' fill='%23eef3ff'/%3E%3Crect width='4' height='4' fill='%23e3ebff'/%3E%3C/svg%3E"); font: 12px/1.4 Verdana, Tahoma, Arial, sans-serif; color: #000; }
+  .wrap { max-width: 760px; margin: 0 auto; background: #fff; border-left: 1px solid #99c; border-right: 1px solid #99c; min-height: 100vh; }
+  .head { background: linear-gradient(#003399, #0066cc); color: #fff; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+  .head h1 { margin: 0; font: italic 900 26px "Arial Black", Arial, sans-serif; letter-spacing: -1px; text-shadow: 2px 2px #002; }
+  .head h1 span { color: #ffcc00; }
+  .head form { display: flex; gap: 3px; } .head input { width: 160px; }
+  .nav { background: #ffcc00; padding: 3px 10px; font-weight: bold; font-size: 11px; }
+  .nav a { color: #003399; margin-right: 10px; }
+  marquee, .mq { display: block; background: #000; color: #0f0; font: bold 12px "Courier New", monospace; padding: 3px; white-space: nowrap; overflow: hidden; }
+  .mq span { display: inline-block; padding-left: 100%; animation: m 25s linear infinite; } @keyframes m { to { transform: translateX(-100%); } }
+  .cols { display: grid; grid-template-columns: 170px 1fr; gap: 10px; padding: 10px; }
+  @media (max-width: 560px) { .cols { grid-template-columns: 1fr; } }
+  .box { border: 1px solid #6699cc; margin-bottom: 10px; }
+  .box h3 { margin: 0; background: #6699cc; color: #fff; font-size: 11px; padding: 3px 6px; text-transform: uppercase; }
+  .box div { padding: 6px; }
+  .box a { display: block; padding: 1px 0; }
+  a { color: #0000cc; } a:visited { color: #551a8b; } a:hover { color: #f00; }
+  .new { color: #fff; background: #f00; font: bold 9px Arial; padding: 0 3px; animation: b 1s steps(2) infinite; } @keyframes b { 50% { opacity: 0; } }
+  .hot { font-size: 14px; font-weight: bold; color: #c00; margin: 0 0 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
+  .card { border: 1px dashed #99c; padding: 6px; background: #f8fbff; }
+  .card b { display: block; color: #003399; }
+  .uc { text-align: center; color: #666; font-size: 10px; padding: 10px; border-top: 1px solid #ccc; }
+  .counter { font: bold 14px "Courier New", monospace; background: #000; color: #0f0; padding: 1px 4px; letter-spacing: 2px; }
+  .thanks { background: #002; color: #ff0; } .thanks span { animation-duration: 40s; }
+  .mq:hover span { animation-play-state: paused; }
+  @media (prefers-reduced-motion: reduce) { .mq span { animation: none; padding-left: 0; white-space: normal; } }
+  .banner { display: flex; flex-direction: column; justify-content: center; width: 100%; max-width: 468px; height: 60px; box-sizing: border-box; margin: 0 auto 10px; padding: 4px 10px; text-decoration: none; text-align: center; color: #fff; background: repeating-linear-gradient(45deg, #c00 0 10px, #e22 10px 20px); border: 2px outset #f66; font-family: "Arial Black", Arial, sans-serif; }
+  .banner b { font-size: 18px; color: #ff0; text-shadow: 1px 1px #000; } .banner small { font: 10px Verdana; }
+  .disc { color: #888; font-size: 9px; }
+  .badge { display: inline-block; border: 1px solid #000; font: 9px Verdana; margin: 2px; padding: 1px 4px; background: #eee; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head"><h1>Portal <span>Nusantara</span>.Net</h1>
+    <form id="cari"><input name="q" placeholder="Cari di Google..."><button>Cari!</button></form></div>
+  <div class="nav"><a href="#">Berita</a><a href="#">Chatting</a><a href="#">Game</a><a href="#">Download</a><a href="#" data-cmd="contact">Buku Tamu</a><a href="#" data-cmd="donate">Dukung Warnet</a></div>
+  <div class="mq"><span>+++ Selamat datang di Portal Nusantara.Net +++ Semua link dibuka lewat MESIN WAKTU (Wayback Machine) +++ Pilih tahun di sebelah kotak Address +++ Optimal dilihat dengan resolusi 800x600 +++</span></div>
+  <div class="mq thanks"><span id="ticker"></span></div>
+  <div class="cols">
+    <div id="side"></div>
+    <div>
+      <a class="banner" id="banner" target="_blank" rel="noopener"><b></b><small></small></a>
+      <p class="hot">★ Situs Paling Hits di Warnet ★</p>
+      <div class="grid" id="hits"></div>
+      <br>
+      <div class="box" id="tips"><h3>Tips Mesin Waktu</h3><div>
+        Ketik alamat apa saja di kotak <b>Address</b> (misal <code>geocities.com</code>), lalu pilih <b>Tahun</b>.
+        Halaman diambil dari arsip <a href="https://web.archive.org" target="_blank" rel="noopener">Internet Archive</a>.
+        Pilih <b>Live</b> untuk internet zaman sekarang (banyak situs modern menolak tampil dalam frame).
+      </div></div>
+    </div>
+  </div>
+  <div class="uc">
+    <span id="visitors">Anda pengunjung ke-</span> <span class="counter" id="ctr">0012847</span><br><br>
+    <span class="badge">Best viewed with IE 5.5</span><span class="badge">800x600</span><span class="badge">HTML 4.01</span><span class="badge">Made with Notepad</span><br><br>
+    © 2001 Portal Nusantara.Net · 🚧 Under Construction 🚧 · <a href="#" id="kontak" data-cmd="contact">Kontak</a><br>
+    <small class="disc">Proyek nostalgia buatan penggemar. Tidak berafiliasi dengan merek apa pun yang disebut; semua merek milik pemiliknya. Situs lama dari Internet Archive.</small>
+  </div>
+</div>
+<script type="module" src="js/portal.js"></script>
+</body>
+</html>

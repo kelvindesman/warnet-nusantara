@@ -1,0 +1,13 @@
+{
+  "name": "Warnet Nusantara.Net",
+  "short_name": "Warnet",
+  "description": "Nostalgia warnet Indonesia tahun 2000-an di browser.",
+  "lang": "id",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#0a246a",
+  "theme_color": "#0a246a",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

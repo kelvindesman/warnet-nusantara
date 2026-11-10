@@ -1,0 +1,21 @@
+# Warnet Nusantara.Net
+
+> A free, open-source web recreation of an early-2000s Indonesian internet cafe (warnet): billing lock screen with dolphins, XP-style desktop, Wayback Machine time-travel browser, Winamp (Webamp), mIRC-style chat bots, Messenger with BUZZ, and legal retro games. Indonesian UI. No account, no install.
+
+- Play: https://warnet-nusantara.pages.dev/
+- 60-second flashback demo: https://warnet-nusantara.pages.dev/?demo
+- Source code (AGPL-3.0-only; content CC BY-NC-SA 4.0): https://github.com/kelvindesman/warnet-nusantara
+
+## Pages
+
+- [Beranda (Indonesian)](https://warnet-nusantara.pages.dev/id/)
+- [Home (English)](https://warnet-nusantara.pages.dev/en/)
+- [Game Warnet](https://warnet-nusantara.pages.dev/game-warnet/): 46 legal games playable in the browser, 18 memorials for online games that are still owned by their publishers
+- [Winamp](https://warnet-nusantara.pages.dev/winamp/)
+- [mIRC](https://warnet-nusantara.pages.dev/mirc/)
+- [Mesin waktu internet](https://warnet-nusantara.pages.dev/mesin-waktu-internet/): Indonesian websites from 1998–2015 through the Wayback Machine
+- [Tentang warnet](https://warnet-nusantara.pages.dev/tentang-warnet/): FAQ about Indonesian internet cafes in the 2000s
+
+## Optional
+
+- [Full text for LLMs](https://warnet-nusantara.pages.dev/llms-full.txt)
