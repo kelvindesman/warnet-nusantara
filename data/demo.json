@@ -1,0 +1,100 @@
+{
+  "beats": [
+    {
+      "do": "boot",
+      "caption": "Tahun 2003. Pulang sekolah, tas belum ditaruh, langsung ke warnet.",
+      "caption_en": "The year is 2003. Straight from school to the warnet, backpack still on."
+    },
+    {
+      "do": "click",
+      "target": ".sticky",
+      "caption": "Mas operator kasih voucher di kertas kuning. Rp 3.000 sejam.",
+      "caption_en": "The operator hands over a voucher on a yellow note. Rp 3.000 an hour."
+    },
+    {
+      "do": "click",
+      "target": "form.billing [type=submit]",
+      "caption": "PC-07. Kursi plastik, monitor CRT, headset micnya diselotip.",
+      "caption_en": "PC-07. Plastic chair, CRT monitor, a headset with a taped-up mic."
+    },
+    {
+      "do": "waitFor",
+      "target": ".desktop",
+      "ms": 8000,
+      "caption": "Selamat datang... (lumba-lumbanya masih berenang di kepala)",
+      "caption_en": "Welcome... (the dolphins are still swimming in your head)"
+    },
+    {
+      "do": "launch",
+      "app": "friendster",
+      "caption": "Pertama: cek Friendster. Ada testimonial baru nggak ya?",
+      "caption_en": "First: check Friendster. Any new testimonials?"
+    },
+    {
+      "do": "click",
+      "target": "[data-skip]",
+      "optional": true,
+      "wait": 1500,
+      "caption": "Ngiiik... krrrkk... bongg. Dial-up Telkomnet Instan, 080989999.",
+      "caption_en": "Ngiiik... krrrkk... bongg. Telkomnet Instan dial-up, 080989999."
+    },
+    {
+      "do": "wait",
+      "ms": 4200,
+      "caption": "Loading... 56k. Sabar. Sambil nunggu, buka Yahoo! Messenger.",
+      "caption_en": "Loading... 56k. Patience. Open Yahoo! Messenger while you wait."
+    },
+    {
+      "do": "launch",
+      "app": "ym",
+      "caption": "cewe_gaul_2003 sedang online...",
+      "caption_en": "cewe_gaul_2003 is online..."
+    },
+    {
+      "do": "click",
+      "target": ".ym .bz",
+      "caption": "BUZZ!!! Jendelanya goyang. Bilik sebelah ikut kaget.",
+      "caption_en": "BUZZ!!! The window shakes. The next booth jumps too."
+    },
+    {
+      "do": "launch",
+      "app": "chat",
+      "caption": "Masuk mIRC, #jakarta. Kalimat pertama wajib: asl pls?",
+      "caption_en": "Into mIRC, #jakarta. Mandatory first line: asl pls?"
+    },
+    {
+      "do": "wait",
+      "ms": 4000,
+      "caption": "\"cewe jkt pm aq dong\" — semua orang, tahun 2003",
+      "caption_en": "\"cewe jkt pm aq dong\" (any Jakarta girls, PM me) — everyone, 2003"
+    },
+    {
+      "do": "launch",
+      "app": "winamp",
+      "caption": "Puter lagu di Winamp. It really whips the llama's... ya kamu tahu.",
+      "caption_en": "Put a song on in Winamp. It really whips the llama's... you know the rest."
+    },
+    {
+      "do": "balloon",
+      "title": "Billing",
+      "text": "Waktu kamu tinggal 5 menit!",
+      "text_en": "Only 5 minutes left!",
+      "caption": "Billing tinggal 5 menit. Panik.",
+      "caption_en": "5 minutes of billing left. Panic."
+    },
+    {
+      "do": "wait",
+      "ms": 2500,
+      "caption": "\"MAS, NAMBAH SEJAM!\"",
+      "caption_en": "\"MAS, ONE MORE HOUR!\""
+    },
+    {
+      "do": "timeout",
+      "caption": "...telat. WAKTU HABIS. PC terkunci. Save game hilang (Deep Freeze).",
+      "caption_en": "...too late. TIME IS UP. PC locked. Save game gone (Deep Freeze)."
+    },
+    {
+      "do": "end"
+    }
+  ]
+}

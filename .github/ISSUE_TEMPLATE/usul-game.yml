@@ -1,0 +1,67 @@
+name: "Usul game / Suggest a game"
+description: "Game warnet yang harus ada di folder Game Warnet. Suggest a game for the Game Warnet folder."
+title: "Usul game: "
+labels: ["needs-triage", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Kami cuma menautkan game yang legal. We only link games that are legal to play:
+        - **A**: gratis / open source / shareware / versi web resmi. Free, open source, shareware or official.
+        - **B**: abandonware yang di-host Internet Archive. Abandonware hosted by the Internet Archive.
+        - **C**: server pribadi, ROM atau download game yang masih dijual (Ragnarok Online, GunBound, Point Blank...). Tidak akan ditautkan, tapi bisa dibuatkan "Shrine" (halaman Wayback + "server lagi maintenance"). Never linked; we can build a Shrine instead.
+
+        Datang dari website? Label `from-web` boleh ditambahkan lewat URL.
+  - type: input
+    id: name
+    attributes:
+      label: Nama game / Game name
+      placeholder: "Prince of Persia 2"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL untuk main / Where it can be played
+      placeholder: "https://archive.org/details/msdos_..."
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Tingkat legalitas / Legality tier
+      options:
+        - "A - gratis / open source / shareware / resmi (free, open, official)"
+        - "B - abandonware di Internet Archive"
+        - "C - server pribadi / ROM / game yang masih dijual (jadi Shrine)"
+        - "Tidak tahu / Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: Lisensi atau sumber / License or source
+      description: Link ke lisensi, halaman resmi, atau item Internet Archive yang membuktikan tingkatnya. A link proving the tier.
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Main di jendela atau tab baru? / Embed or new tab?
+      description: Banyak situs melarang dibuka di iframe (X-Frame-Options / CSP frame-ancestors). Many sites forbid framing.
+      options:
+        - "Embed (di dalam jendela)"
+        - "Tab baru (new tab)"
+        - "Tidak tahu / Not sure"
+    validations:
+      required: true
+  - type: input
+    id: year
+    attributes:
+      label: Tahun rilis / Release year
+      placeholder: "1993"
+  - type: textarea
+    id: why
+    attributes:
+      label: Kenangan / Why it matters
+      description: Dulu main di warnet mana? Sama siapa? Who did you play it with?

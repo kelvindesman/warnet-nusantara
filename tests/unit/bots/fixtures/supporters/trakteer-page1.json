@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "status_code": 200,
+  "result": {
+    "data": [
+      { "supporter_name": "Budi", "support_message": "Kangen warnet! <script>alert(1)</script> cek http://spam.example.com", "quantity": 1, "amount": 25000, "unit_name": "Cendol", "updated_at": "2026-10-01 10:00:00", "is_guest": false },
+      { "supporter_name": "Seseorang", "support_message": "anonim", "quantity": 1, "amount": 100000, "unit_name": "Cendol", "updated_at": "2026-10-02 10:00:00", "is_guest": true },
+      { "supporter_name": "Recehan", "support_message": "", "quantity": 1, "amount": 2000, "unit_name": "Cendol", "updated_at": "2026-10-03 10:00:00", "is_guest": false }
+    ],
+    "current_page": 1,
+    "last_page": 2
+  }
+}

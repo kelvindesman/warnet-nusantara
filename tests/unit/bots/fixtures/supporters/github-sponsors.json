@@ -1,0 +1,15 @@
+{
+  "data": {
+    "viewer": {
+      "sponsorshipsAsMaintainer": {
+        "pageInfo": { "hasNextPage": false, "endCursor": "Y3Vyc29yOjI=" },
+        "nodes": [
+          { "createdAt": "2026-07-01T00:00:00Z", "privacyLevel": "PUBLIC", "isOneTimePayment": false, "tier": { "monthlyPriceInDollars": 20, "isOneTime": false }, "sponsorEntity": { "__typename": "User", "login": "octo-dev" } },
+          { "createdAt": "2026-07-02T00:00:00Z", "privacyLevel": "PUBLIC", "isOneTimePayment": true, "tier": { "monthlyPriceInDollars": 10, "isOneTime": true }, "sponsorEntity": { "__typename": "Organization", "login": "kopi-org" } },
+          { "createdAt": "2026-07-03T00:00:00Z", "privacyLevel": "PUBLIC", "isOneTimePayment": false, "tier": { "monthlyPriceInDollars": 1, "isOneTime": false }, "sponsorEntity": { "__typename": "User", "login": "one-dollar" } },
+          { "createdAt": "2026-07-04T00:00:00Z", "privacyLevel": "PRIVATE", "isOneTimePayment": false, "tier": { "monthlyPriceInDollars": 50, "isOneTime": false }, "sponsorEntity": { "__typename": "User", "login": "secret-sam" } }
+        ]
+      }
+    }
+  }
+}

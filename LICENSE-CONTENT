@@ -1,0 +1,59 @@
+Warnet Nusantara.Net - Creative Content License
+================================================
+
+Copyright (c) 2026 Kelvin and the Warnet Nusantara.Net contributors.
+
+The creative content of Warnet Nusantara.Net is licensed under the
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+License (CC BY-NC-SA 4.0).
+
+  Human-readable summary: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  Full legal code:        https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+What this license covers
+------------------------
+
+The following first-party creative assets, wherever they appear in this
+repository (today mostly inside js/data.js, js/apps/*.js, js/icons.js,
+js/main.js, js/sound.js, css/style.css and home.html; later also data/*.json):
+
+  1. Indonesian (and English) UI copy: labels, dialog text, balloon tips,
+     billing messages, marquee/ticker text, jokes and in-world file names.
+  2. IRC and Messenger bot lines: nicknames, channel topics, chatter lines,
+     replies and events used by the IRC Chat and Messenger apps.
+  3. The "memories" and "rules" texts (Kenangan Warnet.txt,
+     ATURAN_WARNET.txt) and the other in-world documents.
+  4. Inline SVG icons, the game box-art icon style and the dolphin artwork
+     used on the billing lock screen and elsewhere.
+  5. The synthesized chiptune compositions (the track definitions: tempo,
+     chord progressions, seeds and arrangement) and the audio they render.
+  6. Wallpaper art (the gradient/scene wallpapers in Display Properties).
+
+What this license does NOT cover
+--------------------------------
+
+  * Source code. All code (JavaScript, CSS, HTML structure, scripts and
+    workflows) is licensed under the GNU Affero General Public License v3.0
+    only. See LICENSE.
+  * The name "Warnet Nusantara.Net" and its logo. These are reserved; see
+    TRADEMARK.md.
+  * Third-party material: websites served by the Internet Archive Wayback
+    Machine, embedded or linked games and web ports, Webamp, and any other
+    third-party content. These remain under their owners' own terms. See
+    CREDITS.md and DISCLAIMER.md.
+  * Third-party trademarks and product names referenced for nostalgia or
+    parody (nominative use only).
+
+Attribution
+-----------
+
+When you share or adapt the covered content, credit it as:
+
+  "Warnet Nusantara.Net content by Kelvin and contributors,
+   CC BY-NC-SA 4.0, https://github.com/kelvindesman/warnet-nusantara"
+
+Commercial use
+--------------
+
+Commercial use of the covered content is not permitted under CC BY-NC-SA 4.0.
+A separate commercial license may be available; see COMMERCIAL.md.

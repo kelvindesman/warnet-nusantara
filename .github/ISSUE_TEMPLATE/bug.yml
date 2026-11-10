@@ -1,0 +1,71 @@
+name: "Lapor bug / Bug report"
+description: "Ada yang rusak? PC hang, jendela nyangkut, game tidak jalan. Something is broken."
+title: "Bug: "
+labels: ["needs-triage", "bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Makasih udah lapor ke mas operator! Thanks for reporting.
+        Masalah keamanan? Jangan di sini, pakai Security Advisories. Security issues go to the private advisory form instead.
+        Datang dari website? Label `from-web` boleh ditambahkan lewat URL.
+  - type: textarea
+    id: what
+    attributes:
+      label: Apa yang terjadi? / What happened?
+      description: Ceritakan bug-nya. What did you see?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Langkah untuk mengulang / Steps to reproduce
+      placeholder: |
+        1. Buka https://warnet-nusantara.pages.dev/#desktop
+        2. Klik 2x "Game Warnet"
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Seharusnya? / Expected behaviour
+    validations:
+      required: true
+  - type: dropdown
+    id: app
+    attributes:
+      label: Aplikasi / App
+      options:
+        - Boot / BIOS
+        - Billing lock screen
+        - Desktop / Start menu / taskbar
+        - Penjelajah Internet (browser)
+        - Portal (home.html)
+        - Winamp
+        - Game Warnet
+        - IRC Chat
+        - Messenger
+        - Ranjau
+        - Ular HP
+        - Lainnya / Other
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser dan perangkat / Browser and device
+      placeholder: "Chrome 130, Android 14"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Live site, fork, atau localhost?
+      placeholder: "https://warnet-nusantara.pages.dev/"
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshot, console error, catatan lain / Screenshots and console errors
+      description: Seret gambar ke sini. Drag images here.

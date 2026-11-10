@@ -1,0 +1,9 @@
+{
+  "current_page": 1,
+  "data": [
+    { "subscription_id": 9, "subscription_coffee_price": "5.0000", "subscription_coffee_num": 10, "subscription_duration_type": "month", "subscription_currency": "USD", "payer_name": "Big Co", "payer_email": "billing@example.invalid", "subscription_message": "Pasang banner kami ya", "subscription_created_on": "2026-08-01 00:00:00", "subscription_is_cancelled": null, "subscription_hidden": false },
+    { "subscription_id": 10, "subscription_coffee_price": "60.0000", "subscription_coffee_num": 1, "subscription_duration_type": "year", "subscription_currency": "USD", "payer_name": "Yearly Yan", "subscription_message": "", "subscription_created_on": "2026-08-02 00:00:00", "subscription_is_cancelled": null, "subscription_hidden": false }
+  ],
+  "next_page_url": null,
+  "last_page": 1
+}

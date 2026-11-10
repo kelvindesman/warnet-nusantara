@@ -1,0 +1,41 @@
+name: "Kenangan warnet / Warnet memory"
+description: "Bagikan kenangan warnet kamu. Bisa jadi bot IRC, isi Notepad atau easter egg. Share a warnet memory."
+title: "Kenangan: "
+labels: ["needs-triage", "kenangan"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ceritakan apa saja: operator galak, paket malam, mi instan jam 2 pagi, bunyi modem.
+        Kenangan yang panjang atau buat ngobrol lebih cocok di Discussions (kategori Kenangan Warnet).
+        Datang dari website? Label `from-web` boleh ditambahkan lewat URL.
+  - type: textarea
+    id: memory
+    attributes:
+      label: Kenangan kamu / Your memory
+      placeholder: "Dulu di warnet deket sekolah, paket malam Rp 10.000, bangun subuh langsung ke sekolah..."
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: Tahun dan kota (opsional) / Year and city (optional)
+      placeholder: "2004, Bandung"
+  - type: dropdown
+    id: use
+    attributes:
+      label: Boleh dipakai di game? / May we use it in the game?
+      description: Misalnya jadi baris bot IRC atau teks di Notepad (lisensi CC BY-NC-SA 4.0). For example as an IRC bot line or notepad text, under CC BY-NC-SA 4.0.
+      options:
+        - "Boleh, sebut nama GitHub saya / Yes, credit my GitHub name"
+        - "Boleh, tanpa nama / Yes, anonymously"
+        - "Jangan, cuma mau cerita / No, just sharing"
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privasi / Privacy
+      options:
+        - label: Saya tidak menulis nama asli, nomor HP atau data pribadi orang lain. I did not include other people's real names, phone numbers or personal data.
+          required: true

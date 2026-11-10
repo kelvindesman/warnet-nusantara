@@ -1,0 +1,25 @@
+# --- private / local only: NEVER commit (enforced by tests/unit/repo-hygiene.test.mjs) ---
+.ops/
+.env
+.env.*
+!.env.example
+*.local.*
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/memory/
+.claude/plans/
+.claude/todos/
+.claude/worktrees/
+*.jsonl
+*.pem
+*.key
+
+# --- build / test output ---
+node_modules
+.vercel
+test-results/
+playwright-report/
+coverage/
+reports/
+.stryker-tmp/
+.DS_Store

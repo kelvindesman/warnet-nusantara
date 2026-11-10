@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ngobrol, tanya-tanya, ide mentah (GitHub Discussions)
+    url: https://github.com/kelvindesman/warnet-nusantara/discussions
+    about: Pertanyaan, ide yang belum jelas, kenangan panjang dan pamer karya. Questions, rough ideas, long memories and show & tell.
+  - name: Laporan keamanan (Security vulnerability)
+    url: https://github.com/kelvindesman/warnet-nusantara/security/advisories/new
+    about: Jangan buka issue publik untuk masalah keamanan. Report security issues privately here.

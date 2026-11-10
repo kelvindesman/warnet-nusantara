@@ -1,0 +1,23 @@
+{
+  "name": "warnet-nusantara-net",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Nostalgia warnet Indonesia 2000-an: billing lumba-lumba, desktop ala XP, browser mesin waktu, Winamp, IRC, game jadul.",
+  "scripts": {
+    "dev": "node tests/serve.mjs 3000 /",
+    "typecheck": "tsc -p tsconfig.json",
+    "test:unit": "node --test 'tests/unit/**/*.test.mjs'",
+    "e2e": "playwright test",
+    "e2e:full": "FULL=1 playwright test",
+    "gate": "node scripts/gate.mjs",
+    "deploy": "npx --yes vercel --prod",
+    "seo": "node scripts/seo/pages.mjs",
+    "seo:og": "node scripts/seo/og.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "monocart-reporter": "^2.15.1",
+    "typescript": "^5.9.3"
+  }
+}

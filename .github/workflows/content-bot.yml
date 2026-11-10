@@ -1,0 +1,84 @@
+# Turns an approved "Usul situs" issue into a pull request that appends the site to
+# data/bookmarks.json. A triager applies the `approved` label; the bot validates the form
+# (URL http(s), year 1996-2008, name <= 60 chars, no HTML) and either opens the PR or
+# comments what is wrong. The PR still goes through the gate and CODEOWNERS review.
+name: content-bot
+
+on:
+  issues:
+    types: [labeled]
+
+permissions: {}
+
+concurrency:
+  group: content-bot-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  add-site:
+    if: >-
+      github.event.label.name == 'approved' &&
+      !github.event.issue.pull_request &&
+      !contains(github.event.issue.labels.*.name, 'nomination') &&
+      (contains(github.event.issue.labels.*.name, 'content') || contains(github.event.issue.labels.*.name, 'konten')) &&
+      startsWith(github.event.issue.title, 'Usul situs')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Parse and validate the suggestion
+        id: bot
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: node scripts/bots/content-bot.mjs data/bookmarks.json
+
+      - name: Explain why the suggestion was not added
+        if: steps.bot.outputs.ok != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ERRORS: ${{ steps.bot.outputs.errors }}
+        run: |
+          {
+            echo "Waduh, bot operator belum bisa menambahkan situs ini:"
+            echo
+            printf '%s\n' "$ERRORS"
+            echo
+            echo "Silakan edit isi issue ini, lalu triager bisa pasang ulang label \`approved\`."
+          } > "$RUNNER_TEMP/comment.md"
+          gh issue comment "$ISSUE_NUMBER" --body-file "$RUNNER_TEMP/comment.md"
+          gh issue edit "$ISSUE_NUMBER" --remove-label approved
+
+      - name: Open the pull request
+        if: steps.bot.outputs.ok == 'true'
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          # A PR opened with GITHUB_TOKEN does not trigger the gate. Set the optional
+          # BOT_PR_TOKEN secret (fine-grained PAT: contents + pull-requests write on this
+          # repo only) so the gate runs automatically; otherwise a maintainer re-runs it.
+          token: ${{ secrets.BOT_PR_TOKEN || github.token }}
+          add-paths: data/bookmarks.json
+          branch: konten/usul-situs-${{ github.event.issue.number }}
+          delete-branch: true
+          commit-message: "content: add ${{ steps.bot.outputs.name }} (${{ steps.bot.outputs.year }}) from #${{ github.event.issue.number }}"
+          title: "konten: tambah situs ${{ steps.bot.outputs.name }} (${{ steps.bot.outputs.year }})"
+          body: |
+            Dibuat otomatis oleh `content-bot` dari usulan di #${{ github.event.issue.number }} setelah triager memberi label `approved`.
+
+            - [ ] Cek snapshot Wayback untuk tahun tersebut benar-benar bisa dibuka.
+            - [ ] Gate lulus (lihat checks).
+
+            Closes #${{ github.event.issue.number }}
+          labels: konten

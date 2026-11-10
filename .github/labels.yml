@@ -1,0 +1,73 @@
+# Repository labels, synced by .github/workflows/labels.yml (EndBug/label-sync).
+# Labels not listed here are left alone.
+
+# Triage state machine (CONTRIBUTING.md)
+- name: needs-triage
+  color: "fbca04"
+  description: Belum dilihat triager. Not triaged yet.
+- name: ready-for-agent
+  color: "0e8a16"
+  description: Spesifikasi jelas + acceptance checks; aman untuk AI agent atau pemula.
+- name: ready-for-human
+  color: "1d76db"
+  description: Butuh penilaian manusia (desain, legal, hardware lama).
+- name: wontfix
+  color: "ffffff"
+  description: Di luar scope, tidak aman secara legal, atau duplikat.
+- name: needs-human
+  color: "d93f0b"
+  description: Bot tidak bisa memproses (AI istirahat/kuota habis); butuh maintainer.
+
+# Contributor-friendly
+- name: good first issue
+  color: "7057ff"
+  description: Cocok untuk kontribusi pertama.
+- name: help wanted
+  color: "008672"
+  description: Maintainer butuh bantuan dari luar.
+
+# Topics
+- name: konten
+  color: "c5def5"
+  description: Konten (situs, teks, baris bot) di data/.
+- name: content
+  color: "c5def5"
+  description: Alias of konten, applied by the issue forms.
+- name: game
+  color: "bfd4f2"
+  description: Game Warnet (lihat tingkat legalitas di add-game skill).
+- name: bug
+  color: "d73a4a"
+  description: Ada yang rusak. Something is broken.
+- name: kenangan
+  color: "f9d0c4"
+  description: Kenangan warnet dari komunitas.
+- name: kerja-sama
+  color: "fef2c0"
+  description: Sponsor, banner, kerja sama bisnis.
+- name: from-web
+  color: "ededed"
+  description: Datang dari link usulan di website.
+- name: from-web-anon
+  color: "ededed"
+  description: Datang dari website tanpa akun GitHub (diteruskan bot).
+
+# Bots and process
+- name: nomination
+  color: "5319e7"
+  description: Nominasi triager/maintainer (dibuka bot nominate).
+- name: approved
+  color: "0e8a16"
+  description: Disetujui triager/owner; memicu bot (content-bot, nominate).
+- name: update-snapshots
+  color: "c2e0c6"
+  description: PR boleh memperbarui snapshot visual e2e.
+- name: stale
+  color: "eeeeee"
+  description: Tidak ada aktivitas lama (housekeeping).
+- name: pinned
+  color: "000000"
+  description: Jangan pernah ditandai stale.
+- name: security
+  color: "b60205"
+  description: Terkait keamanan (laporan sensitif lewat security advisory).

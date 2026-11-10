@@ -1,0 +1,50 @@
+# Deploy. Reusable workflow called by gate.yml's `deploy` job, which runs only on push to
+# main and `needs` every gate job, so only a commit that passed the gate is published.
+# The allowlisted public files (scripts/bots/build-site.mjs) are force-pushed as a single
+# commit to the `live` branch; Cloudflare Pages (project warnet-nusantara, production
+# branch `live`, no build command, output directory `/`) serves that branch at
+# https://warnet-nusantara.pages.dev/. No Cloudflare token lives in this repo.
+name: pages
+
+on:
+  workflow_call:
+
+permissions: {}
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Assemble public files into _site
+        run: node scripts/bots/build-site.mjs _site
+      - name: Refuse to publish private paths
+        run: |
+          if find _site \( -name tests -o -name scripts -o -name .github -o -name node_modules -o -name .ops -o -name '*.mjs' -path '*/scripts/*' \) | grep -q .; then
+            echo "::error::private path found in _site"; exit 1
+          fi
+      - name: Push _site to the live branch (Cloudflare Pages deploys it)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          cd _site
+          git init -q -b live
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Deploy ${SHA}"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git" live

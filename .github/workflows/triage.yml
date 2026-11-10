@@ -1,0 +1,87 @@
+# New-issue triage. Gemini (free AI Studio key, no tools, no GitHub token) suggests labels from
+# a fixed allowlist and possible duplicates; scripts/bots/triage.mjs validates the reply as strict
+# JSON and applies only allowlisted labels plus `needs-triage`. A title-similarity check finds
+# obvious duplicates without AI. Without GEMINI_API_KEY (or on quota errors) the bot says it is
+# resting and adds `needs-human`; the workflow never fails because of the AI.
+# Note: GitHub Models (models.github.ai) was retired on 2026-07-30, so Gemini is the only AI here.
+name: triage
+
+on:
+  issues:
+    types: [opened]
+
+permissions: {}
+
+jobs:
+  analyze:
+    if: github.event.issue.user.type != 'Bot'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      issues: read
+    env:
+      HAS_GEMINI: ${{ secrets.GEMINI_API_KEY != '' }}
+    outputs:
+      ai_outcome: ${{ steps.gemini.outcome }}
+      ai_output: ${{ steps.gemini.outputs.summary }}
+      open_issues: ${{ steps.prep.outputs.open_issues }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Build prompt (issue text as data)
+        id: prep
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: node scripts/bots/triage.mjs prompt
+      - name: Ask Gemini for labels
+        id: gemini
+        if: env.HAS_GEMINI == 'true'
+        continue-on-error: true
+        uses: google-github-actions/run-gemini-cli@f77273f4c914e4bf38440cf36a0369cb64a37489 # v0.1.22
+        env:
+          GITHUB_TOKEN: "" # never give the model a token: it reads untrusted text
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          gemini_cli_version: ${{ vars.GEMINI_CLI_VERSION || '0.65.0' }}
+          gemini_model: ${{ vars.GEMINI_TRIAGE_MODEL }}
+          workflow_name: triage
+          settings: |-
+            {
+              "model": { "maxSessionTurns": 2 },
+              "telemetry": { "enabled": false },
+              "tools": { "core": [] }
+            }
+          prompt: ${{ steps.prep.outputs.prompt }}
+
+  label:
+    needs: analyze
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Validate model output and apply labels
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          AI_OUTCOME: ${{ needs.analyze.outputs.ai_outcome }}
+          AI_OUTPUT: ${{ needs.analyze.outputs.ai_output }}
+          OPEN_ISSUES: ${{ needs.analyze.outputs.open_issues }}
+        run: node scripts/bots/triage.mjs apply

@@ -1,0 +1,39 @@
+# Nightly dead-link check of data/*.json and js/data.js (bookmarks via the Wayback Machine).
+# Keeps a single open "Link mati" issue up to date and closes it when everything answers again.
+name: links
+
+on:
+  schedule:
+    - cron: "23 19 * * *" # 02:23 WIB
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: links
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Check every link
+        id: links
+        run: node scripts/bots/link-check.mjs run "$RUNNER_TEMP/links.md"
+      - name: Open, update or close the "Link mati" issue
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          FAILED: ${{ steps.links.outputs.failed }}
+        run: |
+          cat "$RUNNER_TEMP/links.md" >> "$GITHUB_STEP_SUMMARY"
+          node scripts/bots/link-check.mjs issue "$RUNNER_TEMP/links.md"

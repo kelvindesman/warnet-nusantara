@@ -1,0 +1,12 @@
+# Code owners. Later rules win, so the specific paths come after the catch-all.
+# Owner handle filled by the owner (2026-11-10).
+
+*            @kelvindesman
+
+/js/         @kelvindesman
+/css/        @kelvindesman
+*.html       @kelvindesman
+/.github/    @kelvindesman
+
+# Content data: add the triage team here once one exists.
+/data/**     @kelvindesman

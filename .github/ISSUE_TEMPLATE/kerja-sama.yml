@@ -1,0 +1,43 @@
+name: "Kerja sama / sponsor / Partnership"
+description: "Mau sponsor, pasang iklan di portal, lisensi komersial atau kolaborasi? Partnership, sponsorship or commercial licensing."
+title: "Kerja sama: "
+labels: ["needs-triage", "kerja-sama"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Issue ini publik.** Tulis ringkasan singkat saja. Detail pribadi (kontak, harga, kontrak) kirim lewat email ke `kelvindsmn@gmail.com`.
+        **This issue is public.** Keep it short. Send private details (contacts, pricing, contracts) by email to `kelvindsmn@gmail.com` instead.
+        Lisensi komersial: lihat COMMERCIAL.md. Datang dari website? Label `from-web` boleh ditambahkan lewat URL.
+  - type: input
+    id: org
+    attributes:
+      label: Nama organisasi atau proyek / Organization or project
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Jenis kerja sama / Kind of partnership
+      options:
+        - "Sponsor / donasi (Paket Malam, Member VIP)"
+        - "Pasang iklan di portal (banner)"
+        - "Lisensi komersial (white-label, kiosk, reskin)"
+        - "Kolaborasi konten / media / komunitas"
+        - "Lainnya / Other"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Ringkasan publik / Public summary
+      description: Satu-dua paragraf, tanpa detail pribadi. One or two paragraphs, no private details.
+    validations:
+      required: true
+  - type: checkboxes
+    id: email
+    attributes:
+      label: Konfirmasi / Confirm
+      options:
+        - label: Detail pribadi akan saya kirim lewat email, bukan di issue ini. I will send private details by email, not in this issue.
+          required: true

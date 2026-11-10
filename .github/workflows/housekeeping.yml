@@ -1,0 +1,66 @@
+# Housekeeping: mark stale issues (60 days) and PRs (30 days), and welcome first-time contributors.
+name: housekeeping
+
+on:
+  schedule:
+    - cron: "41 3 * * *"
+  workflow_dispatch:
+  issues:
+    types: [opened]
+  # Needed so the welcome can be posted on PRs from forks. This workflow never checks out
+  # or runs PR code; it only calls actions/first-interaction.
+  pull_request_target: # zizmor: ignore[dangerous-triggers]
+    types: [opened]
+
+permissions: {}
+
+jobs:
+  stale:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@4391f3da665fdf50b6810c1a66712fb9ba21aa93 # v11.0.0
+        with:
+          days-before-issue-stale: 60
+          days-before-pr-stale: 30
+          days-before-close: 14
+          stale-issue-label: stale
+          stale-pr-label: stale
+          exempt-issue-labels: pinned,security,ready-for-human,ready-for-agent,nomination
+          exempt-pr-labels: pinned,security,ready-for-human
+          exempt-draft-pr: false
+          stale-issue-message: >-
+            Issue ini sudah 60 hari sepi, jadi kami tandai `stale`. Kalau masih relevan, balas saja di sini
+            dan label akan hilang; kalau tidak ada kabar, issue ditutup 14 hari lagi.
+          stale-pr-message: >-
+            PR ini sudah 30 hari tanpa aktivitas. Masih lanjut? Push commit atau balas di sini; kalau tidak,
+            PR ditutup 14 hari lagi (bisa dibuka lagi kapan saja).
+          close-issue-message: Ditutup karena tidak ada aktivitas. Silakan buka lagi kalau masih relevan.
+          close-pr-message: Ditutup karena tidak ada aktivitas. Terima kasih sudah mampir ke bilik!
+          operations-per-run: 100
+
+  welcome:
+    if: github.event_name == 'issues' || github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/first-interaction@1c4688942c71f71d4f5502a26ea67c331730fa4d # v3.1.0
+        with:
+          issue_message: |
+            Selamat datang di bilik Warnet Nusantara.Net! Makasih sudah buka issue pertamamu.
+            Triager akan memberi label dulu (`needs-triage`). Sambil menunggu, intip
+            [CONTRIBUTING.md](https://github.com/${{ github.repository }}/blob/HEAD/CONTRIBUTING.md) dan
+            [daftar good first issue](https://github.com/${{ github.repository }}/issues?q=is%3Aopen+label%3A%22good+first+issue%22).
+          pr_message: |
+            Selamat datang, operator baru! Makasih untuk PR pertamamu.
+            Pastikan sudah baca [CONTRIBUTING.md](https://github.com/${{ github.repository }}/blob/HEAD/CONTRIBUTING.md):
+            `npm run gate` harus lulus dan outputnya ditempel di template PR, setiap test punya komentar `// source:`,
+            dan kamu perlu tanda tangan CLA. Cari tugas berikutnya di
+            [good first issue](https://github.com/${{ github.repository }}/issues?q=is%3Aopen+label%3A%22good+first+issue%22).

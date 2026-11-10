@@ -1,0 +1,11 @@
+{
+  "current_page": 1,
+  "data": [
+    { "support_id": 1, "supporter_name": "Alice", "support_coffees": 2, "support_coffee_price": "5.0000", "support_currency": "USD", "support_note": "Nostalgia!", "support_created_on": "2026-09-10 08:00:00", "is_refunded": null, "support_visibility": 1, "payer_email": "alice@example.invalid" },
+    { "support_id": 2, "supporter_name": "Someone", "support_coffees": 1, "support_coffee_price": "5.0000", "support_note": "", "support_created_on": "2026-09-11 08:00:00", "is_refunded": null, "support_visibility": 1, "payer_email": "x@example.invalid" },
+    { "support_id": 3, "supporter_name": "Refunded Rob", "support_coffees": 5, "support_coffee_price": "5.0000", "support_note": "", "support_created_on": "2026-09-12 08:00:00", "is_refunded": true, "support_visibility": 1 },
+    { "support_id": 4, "supporter_name": "Private Pat", "support_coffees": 5, "support_coffee_price": "5.0000", "support_note": "", "support_created_on": "2026-09-13 08:00:00", "is_refunded": null, "support_visibility": 0 }
+  ],
+  "next_page_url": null,
+  "last_page": 1
+}

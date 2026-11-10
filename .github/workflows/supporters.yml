@@ -1,0 +1,62 @@
+# Daily supporters sync: Trakteer, Buy Me a Coffee and GitHub Sponsors -> data/supporters.json
+# and the SUPPORTERS block in README.md / README.id.md, proposed as a pull request.
+# Each platform is skipped when its secret is missing; API errors keep the existing entries.
+name: supporters
+
+on:
+  schedule:
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: supporters
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Fetch and merge supporters
+        id: sync
+        env:
+          TRAKTEER_API_KEY: ${{ secrets.TRAKTEER_API_KEY }}
+          BMC_TOKEN: ${{ secrets.BMC_TOKEN }}
+          SPONSORS_TOKEN: ${{ secrets.SPONSORS_TOKEN }}
+        run: node scripts/bots/supporters-sync.mjs
+
+      - name: Open or update the pull request
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ secrets.BOT_PR_TOKEN || github.token }}
+          add-paths: |
+            data/supporters.json
+            README.md
+            README.id.md
+          branch: bot/supporters-sync
+          delete-branch: true
+          commit-message: "content: sync supporters"
+          title: "konten: update daftar pendukung"
+          body: |
+            Sinkronisasi harian dari Trakteer, Buy Me a Coffee dan GitHub Sponsors (`supporters.yml`).
+
+            ```
+            ${{ steps.sync.outputs.summary }}
+            ```
+
+            Nama dan pesan sudah dibersihkan (tanpa URL/HTML, filter kata kasar, maks 140 karakter).
+            Untuk menyembunyikan seseorang, set `"hidden": true` pada entrinya di `data/supporters.json`.
+          labels: konten
