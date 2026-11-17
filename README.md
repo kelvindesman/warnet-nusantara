@@ -88,7 +88,7 @@ Business sponsorships and banners: use the [kerja-sama form](.github/ISSUE_TEMPL
 ### Supporters
 
 <!-- SUPPORTERS:START -->
-Jadilah yang pertama!
+_Belum ada yang patungan. Jadilah yang pertama!_
 <!-- SUPPORTERS:END -->
 
 ## License

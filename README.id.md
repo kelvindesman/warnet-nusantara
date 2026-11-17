@@ -88,7 +88,7 @@ Sponsor bisnis dan banner: isi [formulir kerja sama](.github/ISSUE_TEMPLATE/kerj
 ### Pendukung
 
 <!-- SUPPORTERS:START -->
-Jadilah yang pertama!
+_Belum ada yang patungan. Jadilah yang pertama!_
 <!-- SUPPORTERS:END -->
 
 ## Lisensi
